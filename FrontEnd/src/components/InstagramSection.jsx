@@ -3,9 +3,9 @@ import { FaInstagram } from "react-icons/fa";
 
 const InstagramSection = () => {
   const posts = [
-    { id: 1, img: "https://via.placeholder.com/400x300", caption: "Luxury Villa in LA - $7.5M" },
-    { id: 2, img: "https://via.placeholder.com/400x300", caption: "Modern Beachfront Mansion" },
-    { id: 3, img: "https://via.placeholder.com/400x300", caption: "Tuscan Estate in Malibu" },
+    { id: 1, img: "https://images.unsplash.com/photo-1612637968894-660373e23b03?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", caption: "Luxury Villa in LA - $7.5M" },
+    { id: 2, img: "https://plus.unsplash.com/premium_photo-1664266386277-2789b93c8b53?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", caption: "Modern Beachfront Mansion" },
+    { id: 3, img: "https://images.unsplash.com/photo-1597047084993-bf337e09ede0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", caption: "Tuscan Estate in Malibu" },
   ];
 
   return (

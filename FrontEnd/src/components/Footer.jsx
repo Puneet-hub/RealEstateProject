@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="space-y-4">
           <h1 className="text-3xl font-semibold">THE INDIAN AGENCY</h1>
           <div className="flex items-center gap-4 mt-4">
-            <img src="https://www.leadingre.com/images/logos/LeadingRE-white.svg" alt="Leading" className="w-20" />
-            <img src="https://luxuryportfolio.com/images/logo.svg" alt="LPI" className="w-20" />
+            <img src="https://png.pngtree.com/png-vector/20190328/ourmid/pngtree-real-estate-logo-inspirations-png-image_878456.jpg" alt="Leading" className="w-20" />
+            <img src="https://www.shutterstock.com/image-vector/black-gold-initial-letter-m-260nw-2146809941.jpg" alt="LPI" className="w-20" />
           </div>
         </div>
 
@@ -49,7 +49,7 @@ const Footer = () => {
           <p className="text-xs uppercase text-gray-400">Custom Website Design By</p>
           <h3 className="text-xl font-semibold tracking-wide">The Indian Agency Design</h3>
           <p className="text-sm uppercase text-gray-400">Proud Member of</p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/CREDAI_logo.png" alt="CREDAI" className="w-24" />
+          <img src="https://www.shutterstock.com/image-vector/modern-roof-top-house-logo-260nw-2515312981.jpg" alt="CREDAI" className="w-24" />
         </div>
       </div>
 

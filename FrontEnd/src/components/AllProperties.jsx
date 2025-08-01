@@ -71,3 +71,4 @@ const AllProperties = () => {
 };
 
 export default AllProperties;
+

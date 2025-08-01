@@ -34,7 +34,7 @@ const Buy = () => {
 
       {/* AI Search Section */}
       <div className="bg-white rounded-2xl shadow-lg p-6 mb-10 border border-gray-200">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">🔍 AI Property Search</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">🔍 Type the kind of property you want to buy</h2>
         <AISearch />
       </div>
 
