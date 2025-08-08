@@ -17,6 +17,8 @@ const Navbar = () => {
   return (
     <nav className="bg-black shadow-md px-6 py-4 flex justify-between items-center sticky top-0 z-50">
       {/* Logo */}
+
+      
       <h1 className="text-2xl font-bold text-white tracking-wide">
         <Link to="/" className="hover:text-blue-400 transition">IndianAgency</Link>
       </h1>

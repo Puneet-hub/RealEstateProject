@@ -17,9 +17,8 @@ import AllProperties from "./components/AllProperties";
 import PropertyDetails from "./components/PropertyDetails";
 import Buy from "./components/Buy";
 import Rent from "./components/Rent";
-import AdminPanel from "./components/admin/AdminPanel"; // ✅ correct path
 import Login from "./components/Login";
-import Register from "./components/Register";
+// import AdminPanel from "./components/AdminPanel";
 
 function App() {
   return (
@@ -49,9 +48,10 @@ function App() {
           <Route path="/services/:serviceId" element={<ServiceDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/readmore" element={<Readmore />} />
+
+          {/* ✅ Admin and Login Routes */}
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/admin" element={<AdminPanel />} />
+          {/* <Route path="/admin" element={<AdminPanel />} /> */}
         </Routes>
       </Router>
     </PropertyProvider>
