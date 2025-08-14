@@ -1,0 +1,12 @@
+# Ignore dependencies
+Frontend/node_modules/
+Backend/node_modules/
+
+# Ignore environment file
+*/.env
+.env.local
+.env.development
+.env.production
+
+**/.env
+**/.env.hello
