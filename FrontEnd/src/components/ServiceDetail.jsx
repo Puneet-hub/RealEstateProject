@@ -77,20 +77,33 @@ export default function ServiceDetail() {
   if (!service) {
     return (
       <div className="p-10 text-center">
-        <h1 className="text-3xl font-bold text-red-600">Service not found</h1>
+        <h1 className="text-3xl font-bold text-red-600 animate-pulse">
+          Service not found
+        </h1>
       </div>
     );
   }
 
   return (
-    <div className="p-10 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold mb-4">{service.title}</h1>
-      <p className="text-lg text-gray-700 mb-6">{service.description}</p>
-      <ul className="list-disc pl-6 text-gray-700">
-        {service.points.map((point, index) => (
-          <li key={index}>{point}</li>
-        ))}
-      </ul>
+    <div className="p-10 md:p-16 bg-gray-50 min-h-screen transition-all duration-500">
+      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12 hover:shadow-2xl transition-shadow duration-500">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+          {service.title}
+        </h1>
+        <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+          {service.description}
+        </p>
+        <ul className="space-y-3">
+          {service.points.map((point, index) => (
+            <li
+              key={index}
+              className="relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-blue-600 before:text-xl hover:text-blue-500 transition-colors duration-300"
+            >
+              {point}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

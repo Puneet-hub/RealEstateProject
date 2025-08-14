@@ -30,40 +30,48 @@ const properties = [
 
 const FeaturedProperties = () => {
   return (
-    <section id="featured" className="py-20 bg-gray-100 px-6">
+    <section id="featured" className="py-24 bg-gray-100 px-6">
       <div className="max-w-6xl mx-auto">
         <h4 className="text-sm uppercase tracking-widest text-gray-500 mb-2">Our Featured Listings</h4>
-        <h2 className="text-4xl font-bold text-gray-800 mb-10">Exclusive Properties</h2>
+        <h2 className="text-4xl font-bold text-gray-800 mb-12">Exclusive Properties</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {properties.map((property) => (
-            <div key={property.id} className="bg-white shadow-md">
+            <div
+              key={property.id}
+              className="bg-white shadow-md rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+            >
               <div className="relative group">
                 <img
                   src={property.image}
                   alt={property.title}
-                  className="w-full h-64 object-cover group-hover:opacity-80 transition"
+                  className="w-full h-64 object-cover transition duration-300 group-hover:opacity-80"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition flex justify-center items-center">
-                  <button className="text-white border border-white px-4 py-2 text-sm">VIEW PROPERTY</button>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-0 group-hover:opacity-80 transition flex justify-center items-center">
+                  <button className="text-white border border-white px-4 py-2 text-sm rounded hover:bg-white hover:text-black transition">
+                    View Property
+                  </button>
                 </div>
               </div>
               <div className="p-4">
-                <p className="text-lg font-semibold">{property.title} <span className="text-gray-500">| {property.location}</span></p>
+                <p className="text-lg font-semibold text-gray-800">
+                  {property.title}{' '}
+                  <span className="text-gray-500 font-medium">| {property.location}</span>
+                </p>
               </div>
             </div>
           ))}
         </div>
 
         {/* 🔘 View All Properties Button */}
-       <div className="text-center mt-10">
-  <Link
-    to="/allproperties"
-    className="inline-block px-6 py-3 bg-black text-white text-sm uppercase tracking-widest hover:bg-gray-800 transition"
-  >
-    View All Properties
-  </Link>
-</div>
+        <div className="text-center mt-12">
+          <Link
+            to="/allproperties"
+            className="inline-block px-8 py-3 bg-black text-white text-sm uppercase tracking-widest rounded-lg hover:bg-gray-800 hover:shadow-lg transition duration-300"
+          >
+            View All Properties
+          </Link>
+        </div>
       </div>
     </section>
   );

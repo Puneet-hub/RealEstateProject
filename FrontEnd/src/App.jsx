@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { PropertyProvider } from "./components/PropertyContext";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import OurStory from "./components/Story";
@@ -18,7 +19,9 @@ import PropertyDetails from "./components/PropertyDetails";
 import Buy from "./components/Buy";
 import Rent from "./components/Rent";
 import Login from "./components/Login";
-// import AdminPanel from "./components/AdminPanel";
+
+// ✅ Default export in Dashboard.jsx will match this import
+import AdminDashboard from "./pages/admin/Dashboard";
 
 function App() {
   return (
@@ -46,12 +49,16 @@ function App() {
           <Route path="/commercial" element={<Commercial />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:serviceId" element={<ServiceDetail />} />
+          
+          {/* Redirect /ourservices to /services */}
+          <Route path="/ourservices" element={<Navigate to="/services" replace />} />
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/readmore" element={<Readmore />} />
-
-          {/* ✅ Admin and Login Routes */}
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/admin" element={<AdminPanel />} /> */}
+
+          {/* ✅ Admin Route */}
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </Router>
     </PropertyProvider>

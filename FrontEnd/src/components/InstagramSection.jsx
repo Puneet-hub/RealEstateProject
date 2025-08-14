@@ -13,25 +13,25 @@ const InstagramSection = () => {
       <p className="text-sm text-gray-500 uppercase tracking-widest mb-2">
         Follow Us On
       </p>
-      <h2 className="text-4xl font-bold text-gray-800 mb-8 relative inline-block">
+      <h2 className="text-4xl font-bold text-gray-800 mb-12 relative inline-block">
         Instagram
-        <span className="block w-16 h-1 bg-blue-600 mx-auto mt-2"></span>
+        <span className="block w-16 h-1 bg-blue-600 mx-auto mt-2 rounded-full"></span>
       </h2>
 
       {/* Instagram Posts */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
         {posts.map((post) => (
           <div
             key={post.id}
-            className="relative group overflow-hidden rounded-xl shadow-lg"
+            className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-1"
           >
             <img
               src={post.img}
               alt={`Post ${post.id}`}
-              className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+              className="w-full h-64 object-cover transition duration-500 group-hover:scale-110 group-hover:brightness-90"
             />
             {/* Overlay with caption */}
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl">
               <p className="text-white text-lg font-medium px-4 text-center">
                 {post.caption}
               </p>
@@ -45,10 +45,10 @@ const InstagramSection = () => {
       </div>
 
       {/* Follow Button */}
-      <div className="mt-8">
+      <div className="mt-10">
         <a
-          href="#"
-          className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 transition"
+          href="https://www.instagram.com/"
+          className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 hover:scale-105 transition transform"
         >
           <FaInstagram className="text-pink-500 text-xl" />
           Follow
