@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -30,7 +30,7 @@ const Home = () => {
             Step into a world of premium real estate
           </p>
           <Link
-            to="/allproperties"
+            href="/allproperties"
             className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition transform hover:scale-105 animate-fadeIn delay-500"
           >
             Explore Properties
@@ -75,17 +75,20 @@ const Home = () => {
 
       {/* 🔻 Intro Section */}
       <section className="mt-12 px-6 text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4 animate-fadeIn">Welcome to Indian Agency</h2>
+        <h2 className="text-3xl font-semibold mb-4 animate-fadeIn">
+          Welcome to Indian Agency
+        </h2>
         <p className="text-gray-700 text-lg animate-fadeIn delay-300">
-          We provide handpicked luxury properties for rent, sale, and investment. Explore our latest listings and
-          find the perfect property for you.
+          We provide handpicked luxury properties for rent, sale, and
+          investment. Explore our latest listings and find the perfect property
+          for you.
         </p>
       </section>
 
       {/* 🔻 Call to Action */}
       <div className="text-center mt-10 mb-12">
         <Link
-          to="/rent"
+          href="/rent"
           className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition transform hover:scale-105 animate-fadeIn delay-500"
         >
           Explore Rentals

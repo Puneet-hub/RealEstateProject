@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import logo from '../assets/WhatsApp Image 2025-08-14 at 01.30.11_60fbe58c.jpg';
 
 const Navbar = () => {
@@ -24,7 +26,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Link
-        to="/"
+        href="/"
         className="absolute transition-all duration-500 ease-in-out"
         style={{
           zIndex: 60,
@@ -44,11 +46,11 @@ const Navbar = () => {
       {/* Navigation Links */}
       <ul className="flex gap-8 font-medium ml-auto mr-10">
         {['Buy', 'Sell', 'Rent', 'Commercial', 'Our Services', 'Contact'].map(
-          (item) => (
+          item => (
             <li key={item}>
               <Link
-                to={`/${item.toLowerCase().replace(' ', '')}`}
-                className="text-white"
+                href={`/${item.toLowerCase().replace(' ', '')}`}
+                className={scrolled ? 'text-white' : 'text-black'}
               >
                 {item}
               </Link>
@@ -61,12 +63,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
 
 // import React, { useState, useEffect } from 'react';
 // import { Link, useNavigate } from 'react-router-dom';
@@ -138,7 +134,7 @@ export default Navbar;
 //           value={search}
 //           onChange={(e) => setSearch(e.target.value)}
 //           className="pl-10 pr-4 py-2 w-64 rounded-full bg-gray-800 text-white border border-gray-700
-//             focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 
+//             focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400
 //             transition-all duration-500 placeholder-gray-400 hover:border-blue-400 hover:shadow-[0_0_8px_#00bfff]"
 //         />
 //       </form>
